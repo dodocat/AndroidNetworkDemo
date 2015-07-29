@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         StringRequest request = new StringRequest(
                 Request.Method.GET,
-                "https://api.github.com/repos/vmg/redcarpet/issues?state=closed",
+                "https://kyfw.12306.cn/otn/",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
