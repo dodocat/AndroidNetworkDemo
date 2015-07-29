@@ -19,7 +19,6 @@ OkHttp 相较于其它的实现有以下的优点.
 * 利用响应缓存来避免重复的网络请求。
 * 当网络出现问题的时候，OKHttp会依然有效，它将从常见的连接问题当中恢复。
 * 如果你的服务端有多个IP地址，当第一个地址连接失败时，OKHttp会尝试连接其他的地址，这对IPV4和IPV6以及寄宿在多个数据中心的服务而言，是非常有必要的。
-* 你可以试试OKHttp而不重写网络代码。okhttp-urlconnection模块实现了都很熟悉的java.net.HttpURLConnection的API，okhttp-apache模块实现了Apache的HttpClient的API。
 
 因此使用 OkHttp 作为替代是好的选择.
 
