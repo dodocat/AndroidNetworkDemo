@@ -1,6 +1,7 @@
 # Android Network Demo
 
-This shows how to use volley with OkHttp and security your api with https.
+This demo shows how to use volley with OkHttp and security your api with https.
+本文同步发于[简书](http://www.jianshu.com/p/e58161cbc3a4)
 
 ## 代码结构说明
 * `tools` 文件夹下是相关的工具 `dumps.sh` 是一个导出证书并转换成 BKS 存储的完整脚本.
@@ -9,8 +10,7 @@ This shows how to use volley with OkHttp and security your api with https.
 * `SelfSignSslOkHttpStack` 检验自签名证书的 HttpStack 实现.
 
 ##  使用 OkHttp 作为传输层的实现.
-Volley 默认根据 Android 系统版本使用不同的 Http 传输协议实现.
-在 Android 3.0 以上 Volley 使用 `ApacheHttpStack ` 作为传输协议, 在2.3 及以下使用 `HttpURLConnection` 作为传输层协议
+Volley 默认根据 Android 系统版本使用不同的 Http 传输协议实现. 3.0 以上使用HttpUrlConnection, 2.3 以下使用 ApacheHttpStack, 参考[Android Http Client].
 
 OkHttp 相较于其它的实现有以下的优点.
 * 支持[SPDY](http://zh.wikipedia.org/wiki/SPDY)，允许连接同一主机的所有请求分享一个socket。
@@ -167,3 +167,4 @@ public class SelfSignSslOkHttpStack extends HurlStack {
 [Security with HTTPS and SSL]:https://developer.android.com/training/articles/security-ssl.html
 [OkHttp Https]:https://github.com/square/okhttp/wiki/HTTPS
 [Github dodocat/AndroidNetworkDemo]:https://github.com/dodocat/AndroidNetworkdemo
+[Android Http Client]:http://android-developers.blogspot.com/2011/09/androids-http-clients.html
